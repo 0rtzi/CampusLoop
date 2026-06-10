@@ -1,6 +1,9 @@
 // Fetch and load products from JSON
 async function loadProducts() {
     try {
+        initializeCart(); // Load cart from localStorage
+        updateCartBadge(); // Update badge with saved count
+        
         const response = await fetch('./assets/products/products.json');
         const products = await response.json();
         console.log('Products loaded:', products.length);
@@ -138,27 +141,41 @@ function createItemCard(product) {
 
     // Add event listener to the buy button
     const buyButton = itemDiv.querySelector('.btn-buy');
-    let isInCart = false;
+    
+    // Check if product is already in cart
+    const isAlreadyInCart = cartItems.has(product.id.toString());
+    
+    if (isAlreadyInCart) {
+        buyButton.classList.add('in-cart');
+        const icon = buyButton.querySelector('span');
+        const text = buyButton.querySelector('p');
+        icon.textContent = 'remove_shopping_cart';
+        text.textContent = 'Remove from cart';
+    }
 
     buyButton.addEventListener('click', () => {
-        isInCart = !isInCart;
+        const productId = product.id.toString();
+        const isInCart = cartItems.has(productId);
         
         const icon = buyButton.querySelector('span');
         const text = buyButton.querySelector('p');
         
-        if (isInCart) {
+        if (!isInCart) {
             buyButton.classList.add('in-cart');
             icon.textContent = 'remove_shopping_cart';
             text.textContent = 'Remove from cart';
+            cartItems.add(productId);
             cartCount++;
         } else {
             buyButton.classList.remove('in-cart');
             icon.textContent = 'add_shopping_cart';
             text.textContent = 'Add to cart';
+            cartItems.delete(productId);
             cartCount--;
         }
         
         updateCartBadge();
+        saveCartToLocalStorage();
     });
 
     return itemDiv;
@@ -177,5 +194,15 @@ function updateCartBadge() {
     }
 }
 
+// Save cart to localStorage
+function saveCartToLocalStorage() {
+    localStorage.setItem('cartCount', cartCount.toString());
+    localStorage.setItem('cartItems', JSON.stringify(Array.from(cartItems)));
+}
+
 // Load products when the page loads
-loadProducts();
+document.addEventListener('DOMContentLoaded', function() {
+    initializeCart(); // Initialize cart from localStorage
+    updateCartBadge(); // Update badge immediately
+    loadProducts(); // Then load products
+});
