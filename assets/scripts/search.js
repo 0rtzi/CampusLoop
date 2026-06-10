@@ -3,6 +3,7 @@ let allProducts = [];
 let productsToDisplay = [];
 let currentPage = 1;
 const PRODUCTS_PER_PAGE = 12;
+let cartCount = 0; // Cart item counter
 
 // Setup search input listener
 function setupSearchListener() {

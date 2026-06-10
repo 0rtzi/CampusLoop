@@ -155,9 +155,11 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
     transition: background-color 0.2s ease, transform 0.1s ease;
     box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.3);
-    padding: 15px;
+    padding: 12px 15px;
     margin-top: auto;
 }
 
@@ -170,11 +172,20 @@ main {
     transform: scale(0.95);
 }
 
+.btn-buy.in-cart {
+    background-color: var(--accent);
+}
+
+.btn-buy.in-cart:hover {
+    background-color: var(--accent-light);
+    transform: scale(1.05);
+}
+
 .btn-buy p {
-    font-size: 20px;
+    font-size: clamp(14px, 2vw, 16px);
     font-weight: 700;
     font-family: 'Montserrat', sans-serif;
-    margin-left: 20px;
+    margin: 0;
 }
 
 /* PAGINATION */

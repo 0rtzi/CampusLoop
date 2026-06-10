@@ -136,7 +136,45 @@ function createItemCard(product) {
         </button>
     `;
 
+    // Add event listener to the buy button
+    const buyButton = itemDiv.querySelector('.btn-buy');
+    let isInCart = false;
+
+    buyButton.addEventListener('click', () => {
+        isInCart = !isInCart;
+        
+        const icon = buyButton.querySelector('span');
+        const text = buyButton.querySelector('p');
+        
+        if (isInCart) {
+            buyButton.classList.add('in-cart');
+            icon.textContent = 'remove_shopping_cart';
+            text.textContent = 'Remove from cart';
+            cartCount++;
+        } else {
+            buyButton.classList.remove('in-cart');
+            icon.textContent = 'add_shopping_cart';
+            text.textContent = 'Add to cart';
+            cartCount--;
+        }
+        
+        updateCartBadge();
+    });
+
     return itemDiv;
+}
+
+// Update cart badge in navbar
+function updateCartBadge() {
+    const badge = document.getElementById('cartBadge');
+    if (badge) {
+        badge.textContent = cartCount;
+        if (cartCount > 0) {
+            badge.style.display = 'flex';
+        } else {
+            badge.style.display = 'none';
+        }
+    }
 }
 
 // Load products when the page loads
