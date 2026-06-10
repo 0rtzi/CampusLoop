@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "title": "Apple AirPods Pro (2nd Gen)",
+    "price": 180,
+    "condition": "Like New",
+    "campus": "Campus A",
+    "image": "airpods-pro.jpg",
+    "description": "Gently used Apple AirPods Pro with excellent sound quality and noise cancellation."
+  },
+  {
+    "id": 2,
+    "title": "Calculus: Early Transcendentals (9th Ed)",
+    "price": 45,
+    "condition": "Good",
+    "campus": "Campus B",
+    "image": "calculus-book.jpg",
+    "description": "Textbook for Calculus course. Some highlights and notes inside. Still in great condition."
+  },
+  {
+    "id": 3,
+    "title": "IKEA Forså Desk Lamp",
+    "price": 15,
+    "condition": "Used",
+    "campus": "Campus A",
+    "image": "desk-lamp.jpg",
+    "description": "Functional desk lamp. Perfect for studying at night. Minor scratches but works perfectly."
+  },
+  {
+    "id": 4,
+    "title": "Organic Chemistry Textbook",
+    "price": 40,
+    "condition": "New",
+    "campus": "Campus C",
+    "image": "organic-chemistry.jpg",
+    "description": "Brand new organic chemistry textbook. Never used. Perfect condition."
+  },
+  {
+    "id": 5,
+    "title": "Anker Portable Power Bank 20000mAh",
+    "price": 25,
+    "condition": "Like New",
+    "campus": "Campus B",
+    "image": "power-bank.jpg",
+    "description": "High capacity power bank. Charges fast. Used only a few times."
+  },
+  {
+    "id": 6,
+    "title": "Sony WH-CH720N Headphones",
+    "price": 95,
+    "condition": "Good",
+    "campus": "Campus A",
+    "image": "sony-headphones.jpg",
+    "description": "Wireless headphones with noise cancellation. Works great. Some cosmetic wear."
+  },
+  {
+    "id": 7,
+    "title": "Linear Algebra and Its Applications",
+    "price": 35,
+    "condition": "Good",
+    "campus": "Campus C",
+    "image": "linear-algebra.jpg",
+    "description": "Essential textbook for linear algebra course. Well-maintained with minimal markings."
+  },
+  {
+    "id": 8,
+    "title": "Logitech MX Master 3S Mouse",
+    "price": 85,
+    "condition": "Like New",
+    "campus": "Campus B",
+    "image": "logitech-mouse.jpg",
+    "description": "Premium wireless mouse. Perfect for productivity. Barely used."
+  },
+  {
+    "id": 9,
+    "title": "Physics Textbook - Fundamentals",
+    "price": 50,
+    "condition": "New",
+    "campus": "Campus A",
+    "image": "physics-textbook.jpg",
+    "description": "New physics textbook. All pages intact. Perfect condition for the course."
+  },
+  {
+    "id": 10,
+    "title": "Dell USB-C Docking Station",
+    "price": 60,
+    "condition": "Used",
+    "campus": "Campus C",
+    "image": "docking-station.jpg",
+    "description": "Functional docking station. Works well with laptops. Shows signs of use."
+  },
+  {
+    "id": 11,
+    "title": "Blue Light Blocking Glasses",
+    "price": 20,
+    "condition": "New",
+    "campus": "Campus B",
+    "image": "blue-light-glasses.jpg",
+    "description": "Brand new blue light glasses for computer work. Never worn."
+  },
+  {
+    "id": 12,
+    "title": "Vintage Study Desk",
+    "price": 120,
+    "condition": "Good",
+    "campus": "Campus A",
+    "image": "vintage-desk.jpg",
+    "description": "Sturdy wooden desk with vintage design. Perfect for a dorm room or apartment."
+  }
+]

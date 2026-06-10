@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="./assets/styles/style.css">
     <link rel="stylesheet" href="./assets/styles/browse.css">
+    <script src="./assets/scripts/search.js"></script>
+    <script src="./assets/scripts/loadProducts.js"></script>
 </head>
 <body>
     <!-- MENU -->
@@ -38,7 +40,7 @@
         <section class="search">
             <div class="search-bar">
                 <span class="material-symbols-rounded">search</span>
-                <input type="search_bar" placeholder="Search">
+                <input type="text" id="searchInput" placeholder="Search">
             </div>
             <div>
                 <button class="btn-filter">
@@ -49,9 +51,9 @@
 
         <!-- ITEM LIST -->
         <section>
-            <div>
+            <div class="items-grid">
                 <!-- ITEM -->
-                <div class="item">
+                <div class="item example" id="1">
                     <div class="state">
                         <p>New</p>
                     </div>

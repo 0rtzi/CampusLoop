@@ -26,6 +26,10 @@ a {
     text-decoration: none;
 }
 
+.example {
+    display: none;
+}
+
 /* HEADER */
 
 .navbar {
