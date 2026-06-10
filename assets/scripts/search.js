@@ -1,5 +1,8 @@
 // Store all products globally for search functionality
 let allProducts = [];
+let productsToDisplay = [];
+let currentPage = 1;
+const PRODUCTS_PER_PAGE = 12;
 
 // Setup search input listener
 function setupSearchListener() {
@@ -19,16 +22,19 @@ function handleSearch(event) {
 
     if (searchTerm === '') {
         // Show all products if search is empty
-        renderProducts(allProducts);
+        productsToDisplay = allProducts;
     } else {
         // Filter products based on search term
-        const filteredProducts = allProducts.filter(product => 
+        productsToDisplay = allProducts.filter(product => 
             product.title.toLowerCase().includes(searchTerm) ||
             product.description.toLowerCase().includes(searchTerm) ||
             product.campus.toLowerCase().includes(searchTerm)
         );
-        renderProducts(filteredProducts);
     }
+    
+    // Reset to first page and render
+    currentPage = 1;
+    renderPage();
 }
 
 // Store products reference

@@ -17,10 +17,12 @@
     --primary-light: hsl(from var(--primary) h s calc(l + 20));
     --primery-dark: hsl(from var(--primary) h s calc(l - 20));
     --secondary-dark: hsl(from var(--secondary) h s calc(l - 5));
+    --background: hsl(0, 0%, 98%);
 }
 
 body {
     font-family: 'Montserrat',sans-serif;
+    background-color: var(--background);
 }
 a {
     text-decoration: none;
@@ -37,7 +39,7 @@ a {
     justify-content: space-between;
     align-items: center;
     padding: 15px 40px;
-    background-color: secondary;
+    background-color: var(--secondary);
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
