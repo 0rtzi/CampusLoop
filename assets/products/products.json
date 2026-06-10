@@ -106,5 +106,149 @@
     "campus": "Campus A",
     "image": "vintage-desk.jpg",
     "description": "Sturdy wooden desk with vintage design. Perfect for a dorm room or apartment."
+  },
+  {
+    "id": 13,
+    "title": "Samsung Galaxy Buds Pro",
+    "price": 120,
+    "condition": "Like New",
+    "campus": "Campus B",
+    "image": "galaxy-buds.jpg",
+    "description": "Excellent wireless earbuds with active noise cancellation. Minimal use."
+  },
+  {
+    "id": 14,
+    "title": "Differential Equations Workbook",
+    "price": 30,
+    "condition": "Good",
+    "campus": "Campus A",
+    "image": "diff-equations.jpg",
+    "description": "Worked examples and practice problems. Good condition with some written solutions."
+  },
+  {
+    "id": 15,
+    "title": "Monitor Stand with Storage",
+    "price": 45,
+    "condition": "Used",
+    "campus": "Campus C",
+    "image": "monitor-stand.jpg",
+    "description": "Adjustable monitor stand with built-in storage drawers. Functions perfectly."
+  },
+  {
+    "id": 16,
+    "title": "Mechanical Keyboard RGB",
+    "price": 75,
+    "condition": "Like New",
+    "campus": "Campus B",
+    "image": "rgb-keyboard.jpg",
+    "description": "Mechanical keyboard with RGB lighting. Barely used. Excellent condition."
+  },
+  {
+    "id": 17,
+    "title": "World History Textbook Volume 1",
+    "price": 55,
+    "condition": "Good",
+    "campus": "Campus A",
+    "image": "world-history.jpg",
+    "description": "Comprehensive world history text with maps and illustrations."
+  },
+  {
+    "id": 18,
+    "title": "Compact Desk Organizer",
+    "price": 18,
+    "condition": "New",
+    "campus": "Campus C",
+    "image": "desk-organizer.jpg",
+    "description": "Multi-compartment desk organizer for pens, notes, and supplies."
+  },
+  {
+    "id": 19,
+    "title": "USB-C Fast Charging Cable (3-pack)",
+    "price": 12,
+    "condition": "New",
+    "campus": "Campus B",
+    "image": "usb-cable.jpg",
+    "description": "Fast charging USB-C cables. Pack of 3. Sealed and unopened."
+  },
+  {
+    "id": 20,
+    "title": "Biology Lab Manual",
+    "price": 28,
+    "condition": "Good",
+    "campus": "Campus A",
+    "image": "bio-lab.jpg",
+    "description": "Lab manual with experiments and diagrams. Contains lab notes and observations."
+  },
+  {
+    "id": 21,
+    "title": "Wireless Mouse Pad",
+    "price": 35,
+    "condition": "Like New",
+    "campus": "Campus C",
+    "image": "wireless-mousepad.jpg",
+    "description": "Wireless charging mouse pad. Charges devices while using. Barely used."
+  },
+  {
+    "id": 22,
+    "title": "Statistics and Probability Guide",
+    "price": 38,
+    "condition": "Good",
+    "campus": "Campus B",
+    "image": "stats-guide.jpg",
+    "description": "Complete guide to statistics and probability theory with examples."
+  },
+  {
+    "id": 23,
+    "title": "Portable Laptop Stand",
+    "price": 22,
+    "condition": "Used",
+    "campus": "Campus A",
+    "image": "laptop-stand.jpg",
+    "description": "Lightweight and adjustable laptop stand. Perfect for studying anywhere."
+  },
+  {
+    "id": 24,
+    "title": "Programming Languages Handbook",
+    "price": 42,
+    "condition": "New",
+    "campus": "Campus C",
+    "image": "programming-handbook.jpg",
+    "description": "Reference guide for multiple programming languages. Never opened."
+  },
+  {
+    "id": 25,
+    "title": "LED Desk Lamp Adjustable",
+    "price": 28,
+    "condition": "Like New",
+    "campus": "Campus B",
+    "image": "led-lamp.jpg",
+    "description": "Energy-efficient LED lamp with adjustable brightness and color temperature."
+  },
+  {
+    "id": 26,
+    "title": "English Literature Reader",
+    "price": 32,
+    "condition": "Good",
+    "campus": "Campus A",
+    "image": "lit-reader.jpg",
+    "description": "Collection of classic literature selections. Annotated with study notes."
+  },
+  {
+    "id": 27,
+    "title": "Wireless Charging Pad",
+    "price": 19,
+    "condition": "New",
+    "campus": "Campus C",
+    "image": "charging-pad.jpg",
+    "description": "Fast wireless charging pad for compatible devices. Brand new."
+  },
+  {
+    "id": 28,
+    "title": "Computer Networks Textbook",
+    "price": 65,
+    "condition": "Good",
+    "campus": "Campus B",
+    "image": "networks-book.jpg",
+    "description": "Comprehensive guide to computer networks and protocols."
   }
 ]
