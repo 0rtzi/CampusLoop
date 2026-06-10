@@ -1,3 +1,8 @@
+// Format price with comma separator
+function formatPrice(price) {
+    return price.toLocaleString('en-US');
+}
+
 // Fetch and load products from JSON
 async function loadProducts() {
     try {
@@ -127,7 +132,7 @@ function createItemCard(product) {
         <h2 class="title">${product.title}</h2>
         <div class="price">
             <span>₩</span>
-            <h1>${product.price}</h1>
+            <h1>${formatPrice(product.price)}</h1>
         </div>
         <div class="location">
             <span class="material-symbols-rounded">place</span>

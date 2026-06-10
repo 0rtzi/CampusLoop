@@ -100,7 +100,7 @@ main {
     height: 200px;
     object-fit: contain;
     border-radius: 12px;
-    background-color: #f1f5f9;
+    background-color: var(--background);
 }
 
 .title {

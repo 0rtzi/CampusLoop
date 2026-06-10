@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "Apple AirPods Pro (2nd Gen)",
-    "price": 180,
+    "price": 225000,
     "condition": "Like New",
     "campus": "Campus A",
     "image": "airpods-pro.jpg",
@@ -11,7 +11,7 @@
   {
     "id": 2,
     "title": "Calculus: Early Transcendentals (9th Ed)",
-    "price": 45,
+    "price": 56250,
     "condition": "Good",
     "campus": "Campus B",
     "image": "calculus-book.jpg",
@@ -20,7 +20,7 @@
   {
     "id": 3,
     "title": "IKEA Forså Desk Lamp",
-    "price": 15,
+    "price": 18750,
     "condition": "Used",
     "campus": "Campus A",
     "image": "desk-lamp.jpg",
@@ -29,7 +29,7 @@
   {
     "id": 4,
     "title": "Organic Chemistry Textbook",
-    "price": 40,
+    "price": 50000,
     "condition": "New",
     "campus": "Campus C",
     "image": "organic-chemistry.jpg",
@@ -38,7 +38,7 @@
   {
     "id": 5,
     "title": "Anker Portable Power Bank 20000mAh",
-    "price": 25,
+    "price": 31250,
     "condition": "Like New",
     "campus": "Campus B",
     "image": "power-bank.jpg",
@@ -47,7 +47,7 @@
   {
     "id": 6,
     "title": "Sony WH-CH720N Headphones",
-    "price": 95,
+    "price": 118750,
     "condition": "Good",
     "campus": "Campus A",
     "image": "sony-headphones.jpg",
@@ -56,7 +56,7 @@
   {
     "id": 7,
     "title": "Linear Algebra and Its Applications",
-    "price": 35,
+    "price": 43750,
     "condition": "Good",
     "campus": "Campus C",
     "image": "linear-algebra.jpg",
@@ -65,7 +65,7 @@
   {
     "id": 8,
     "title": "Logitech MX Master 3S Mouse",
-    "price": 85,
+    "price": 106250,
     "condition": "Like New",
     "campus": "Campus B",
     "image": "logitech-mouse.jpg",
@@ -74,7 +74,7 @@
   {
     "id": 9,
     "title": "Physics Textbook - Fundamentals",
-    "price": 50,
+    "price": 62500,
     "condition": "New",
     "campus": "Campus A",
     "image": "physics-textbook.jpg",
@@ -83,7 +83,7 @@
   {
     "id": 10,
     "title": "Dell USB-C Docking Station",
-    "price": 60,
+    "price": 75000,
     "condition": "Used",
     "campus": "Campus C",
     "image": "docking-station.jpg",
@@ -92,7 +92,7 @@
   {
     "id": 11,
     "title": "Blue Light Blocking Glasses",
-    "price": 20,
+    "price": 25000,
     "condition": "New",
     "campus": "Campus B",
     "image": "blue-light-glasses.jpg",
@@ -101,7 +101,7 @@
   {
     "id": 12,
     "title": "Vintage Study Desk",
-    "price": 120,
+    "price": 150000,
     "condition": "Good",
     "campus": "Campus A",
     "image": "vintage-desk.jpg",
@@ -110,7 +110,7 @@
   {
     "id": 13,
     "title": "Samsung Galaxy Buds Pro",
-    "price": 120,
+    "price": 150000,
     "condition": "Like New",
     "campus": "Campus B",
     "image": "galaxy-buds.jpg",
@@ -119,7 +119,7 @@
   {
     "id": 14,
     "title": "Differential Equations Workbook",
-    "price": 30,
+    "price": 37500,
     "condition": "Good",
     "campus": "Campus A",
     "image": "diff-equations.jpg",
@@ -128,7 +128,7 @@
   {
     "id": 15,
     "title": "Monitor Stand with Storage",
-    "price": 45,
+    "price": 56250,
     "condition": "Used",
     "campus": "Campus C",
     "image": "monitor-stand.jpg",
@@ -137,7 +137,7 @@
   {
     "id": 16,
     "title": "Mechanical Keyboard RGB",
-    "price": 75,
+    "price": 93750,
     "condition": "Like New",
     "campus": "Campus B",
     "image": "rgb-keyboard.jpg",
@@ -146,7 +146,7 @@
   {
     "id": 17,
     "title": "World History Textbook Volume 1",
-    "price": 55,
+    "price": 68750,
     "condition": "Good",
     "campus": "Campus A",
     "image": "world-history.jpg",
@@ -155,7 +155,7 @@
   {
     "id": 18,
     "title": "Compact Desk Organizer",
-    "price": 18,
+    "price": 22500,
     "condition": "New",
     "campus": "Campus C",
     "image": "desk-organizer.jpg",
@@ -164,7 +164,7 @@
   {
     "id": 19,
     "title": "USB-C Fast Charging Cable (3-pack)",
-    "price": 12,
+    "price": 15000,
     "condition": "New",
     "campus": "Campus B",
     "image": "usb-cable.jpg",
@@ -173,7 +173,7 @@
   {
     "id": 20,
     "title": "Biology Lab Manual",
-    "price": 28,
+    "price": 35000,
     "condition": "Good",
     "campus": "Campus A",
     "image": "bio-lab.jpg",
@@ -182,7 +182,7 @@
   {
     "id": 21,
     "title": "Wireless Mouse Pad",
-    "price": 35,
+    "price": 43750,
     "condition": "Like New",
     "campus": "Campus C",
     "image": "wireless-mousepad.jpg",
@@ -191,7 +191,7 @@
   {
     "id": 22,
     "title": "Statistics and Probability Guide",
-    "price": 38,
+    "price": 47500,
     "condition": "Good",
     "campus": "Campus B",
     "image": "stats-guide.jpg",
@@ -200,7 +200,7 @@
   {
     "id": 23,
     "title": "Portable Laptop Stand",
-    "price": 22,
+    "price": 27500,
     "condition": "Used",
     "campus": "Campus A",
     "image": "laptop-stand.jpg",
@@ -209,7 +209,7 @@
   {
     "id": 24,
     "title": "Programming Languages Handbook",
-    "price": 42,
+    "price": 52500,
     "condition": "New",
     "campus": "Campus C",
     "image": "programming-handbook.jpg",
@@ -218,7 +218,7 @@
   {
     "id": 25,
     "title": "LED Desk Lamp Adjustable",
-    "price": 28,
+    "price": 35000,
     "condition": "Like New",
     "campus": "Campus B",
     "image": "led-lamp.jpg",
@@ -227,7 +227,7 @@
   {
     "id": 26,
     "title": "English Literature Reader",
-    "price": 32,
+    "price": 40000,
     "condition": "Good",
     "campus": "Campus A",
     "image": "lit-reader.jpg",
@@ -236,7 +236,7 @@
   {
     "id": 27,
     "title": "Wireless Charging Pad",
-    "price": 19,
+    "price": 23750,
     "condition": "New",
     "campus": "Campus C",
     "image": "charging-pad.jpg",
@@ -245,7 +245,7 @@
   {
     "id": 28,
     "title": "Computer Networks Textbook",
-    "price": 65,
+    "price": 81250,
     "condition": "Good",
     "campus": "Campus B",
     "image": "networks-book.jpg",

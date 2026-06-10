@@ -12,7 +12,7 @@
     --accent: hsl(349, 100%, 65%);
     --text: hsl(0, 0%, 12%);
     --text-secondary: hsl(0, 0%, 29%);
-    --accent-light: hsl(from var(--accent) h s calc(l + 20));
+    --accent-light: hsl(from var(--accent) h s calc(l + 10));
     --accent-dark: hsl(from var(--accent) h s calc(l - 20));
     --primary-light: hsl(from var(--primary) h s calc(l + 20));
     --primery-dark: hsl(from var(--primary) h s calc(l - 20));
@@ -23,6 +23,11 @@
 body {
     font-family: 'Montserrat',sans-serif;
     background-color: var(--background);
+    background-image: 
+        linear-gradient(to right, hsl(from var(--primary) h s l / 0.1) 1px, transparent 1px),
+        linear-gradient(to bottom, hsl(from var(--primary) h s l / 0.1) 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-attachment: fixed;
 }
 a {
     text-decoration: none;
@@ -40,7 +45,8 @@ a {
     align-items: center;
     padding: 15px 40px;
     background-color: var(--secondary);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+    border-radius: 0 0 50px 50px;
 }
 
 .navbar-left {
@@ -179,6 +185,7 @@ footer {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     gap: 40px;
+    box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.05);
 }
 
 .column {
