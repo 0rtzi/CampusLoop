@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+:root {
+    /*COLORS*/
+    --primary: hsl(240, 100%, 39%);
+    --secondary: hsl(0, 0%, 100%);
+    --accent: hsl(349, 100%, 65%);
+    --text: hsl(0, 0%, 12%);
+    --text-secondary: hsl(0, 0%, 29%);
+    --accent-light: hsl(from var(--accent) h s calc(l + 20));
+    --accent-dark: hsl(from var(--accent) h s calc(l - 20));
+    --primary-light: hsl(from var(--primary) h s calc(l + 20));
+    --primery-dark: hsl(from var(--primary) h s calc(l - 20));
+    --secondary-dark: hsl(from var(--secondary) h s calc(l - 5));
+}
+
+body {
+    font-family: 'Montserrat',sans-serif;
+}
+a {
+    text-decoration: none;
+}
+
+/* HEADER */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: secondary;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar-left {
+    flex: 0 0 auto;
+    margin-right: auto;
+}
+
+.navbar-right {
+    flex: 0 0 auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;  
+}
+
+.navbar-center {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text);
+    font-size: 15px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.25s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary);
+    background-color: rgba(59, 130, 246, 0.08);
+}
+
+.nav-link.active {
+    color: var(--primary);
+    background-color: rgba(59, 130, 246, 0.15);
+    font-weight: 600;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img { 
+    width: 60px; 
+    height: auto; 
+}
+
+.logo-name {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--text)
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.nav-icon {
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.nav-icon:hover {
+    color: var(--primary);
+}
+
+.btn-login {
+    text-decoration: none;
+    color: var(--text);
+    font-size: 15px;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.btn-login:hover {
+    color: var(--primary);    
+}
+
+.btn-signup {
+    text-decoration: none;
+    color: var(--secondary);
+    background-color: var(--primary);
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px 22px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.2);
+    transition: all 0.2s ease;
+}
+
+.btn-signup:hover {
+    background-color: #2563eb;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 12px -2px rgba(59, 130, 246, 0.3);
+}
+
+.btn-signup:active {
+    transform: translateY(0);
+}
+
+/* FOOTER */
+
+footer {
+    background-color: var(--secondary-dark);
+    border-top: 1px solid #e2e8f0;
+    padding: 30px 40px 30px 40px;
+    
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.ownership a {
+    display: flex;
+    align-items: center;
+    gap: 10px;                  
+    text-decoration: none;
+    color: var(--primary);
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+footer h5 {
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin: 0 0 8px 0;
+}
+
+.column > a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-size: 14px;
+    font-weight: 500;
+    width: fit-content;
+    transition: all 0.2s ease;
+}
+
+.column > a:hover {
+    color: var(--primary);
+    transform: translateX(3px);
+}

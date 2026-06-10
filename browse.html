@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./assets/logo/CampusLoop_Black.svg">
-    <title>CampusLoop: Home</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>CampusLoop: Browse</title>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="./assets/styles/style.css">
+    <link rel="stylesheet" href="./assets/styles/browse.css">
 </head>
 <body>
     <!-- MENU -->
@@ -20,8 +19,8 @@
             </a>
         </div>
         <nav class="navbar-center">
-            <a class="nav-link active" href="index.html">HOME</a>
-            <a class="nav-link" href="browse.html">STORE</a>
+            <a class="nav-link" href="index.html">HOME</a>
+            <a class="nav-link active" href="browse.html">STORE</a>
             <a class="nav-link" href="contact.html">CONTACT</a>
         </nav>
         <div class="navbar-right">
@@ -33,21 +32,53 @@
         </div>
     </header>
 
-    <!-- MAIN CONTENT -->
+    <!-- BROWSE-->
     <main>
-        <!-- Hero -->
-        <section>
-            <img src="campus.png" alt="Imagen de campus">
+        <!-- SEARCH BAR -->
+        <section class="search">
+            <div class="search-bar">
+                <span class="material-symbols-rounded">search</span>
+                <input type="search_bar" placeholder="Search">
+            </div>
             <div>
-                <h1>From one student to another</h1>
-                <a href="#">Start browsing</a>
+                <button class="btn-filter">
+                    <span class="material-symbols-rounded">filter_list</span>
+                </button>
             </div>
         </section>
-        <!-- Problem -->
-        <section>
 
+        <!-- ITEM LIST -->
+        <section>
+            <div>
+                <!-- ITEM -->
+                <div class="item">
+                    <div class="state">
+                        <p>New</p>
+                    </div>
+                    <img src="#" alt="Product image" class="p-img">
+                    <h2 class="title">Title</h2>
+                    <div class="price">
+                        <span>₩</span>
+                        <h1>Price</h1>
+                    </div>
+                    <div class="location">
+                        <span class="material-symbols-rounded">place</span>
+                        <p>Campus</p>
+                    </div>
+                    <button class="btn-buy">
+                        <span class="material-symbols-rounded">add_shopping_cart</span>
+                        <p>Add to cart</p>
+                    </button>
+                </div>
+            </div>
         </section>
     </main>
+
+    <button>
+        <span class="material-symbols-rounded">
+
+        </span>
+    </button>
 
     <!-- FOOTER -->
     <footer>
@@ -75,4 +106,3 @@
         </div>
     </footer>
 </body>
-</html>
