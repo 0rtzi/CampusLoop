@@ -7,6 +7,7 @@
     <title>Contact - CampusLoop</title>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="./assets/styles/style.css">
+    <link rel="stylesheet" href="./assets/styles/contact.css">
 </head>
 <body>
     <!-- MENU -->
@@ -31,6 +32,81 @@
             <a href="#" class="btn-signup">Sign Up</a>
         </div>
     </header>
+
+    <!-- MAIN -->
+    <main>
+        <section class="contact-section">
+            <div class="container">
+                <span class="section-tagline">Get in Touch</span>
+                <h2>Contact CampusLoop</h2>
+                
+                <div class="contact-grid">
+                    <div class="contact-form-block">
+                        <div class="info-badges">
+                            <div class="info-badge">
+                                <span class="badge-icon">📞</span>
+                                <div>
+                                    <h4>Call Us</h4>
+                                    <p>+82 10-4827-1934</p>
+                                </div>
+                            </div>
+                            <div class="info-badge">
+                                <span class="badge-icon">✉️</span>
+                                <div>
+                                    <h4>Email Us</h4>
+                                    <p>contact@campusloop.kr</p>
+                                </div>
+                            </div>
+                            <div class="info-badge">
+                                <span class="badge-icon">💬</span>
+                                <div>
+                                    <h4>KakaoTalk ID</h4>
+                                    <p>@campusloop</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <form class="contact-form" onsubmit="event.preventDefault(); alert('Demo: ¡Mensaje simulado con éxito!');">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" placeholder="Your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">University Email Address</label>
+                                <input type="email" id="email" placeholder="student@university.edu" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Your Message</label>
+                                <textarea id="message" rows="5" placeholder="How can we help you today?" required></textarea>
+                            </div>
+                            <button type="submit" class="form-submit-btn">Send Message</button>
+                        </form>
+                    </div>
+                    
+                    <div class="contact-map-block">
+                        <h3>Campus Network & HQ</h3>
+                        <p class="map-desc">Our main offices are located in Seoul, right in the heart of the international student hub, connecting major partner universities across the city.</p>
+                        
+                        <div class="map-wrapper">
+                            <iframe 
+                                width="100%" 
+                                height="100%" 
+                                frameborder="0" 
+                                title="Felt Map" 
+                                src="https://felt.com/embed/map/Getting-started-with-Felt-M4kQIqBpT9A6429At9CF5u8DB?loc=37.52944%2C126.97953%2C14.31z&legend=1&cooperativeGestures=1&link=1&geolocation=0&zoomControls=1&scaleBar=1" 
+                                referrerpolicy="strict-origin-when-cross-origin">
+                            </iframe>
+                        </div>
+                        
+                        <div class="map-legend">
+                            <div class="legend-item"><span class="dot office-dot"></span> CampusLoop Headquarters</div>
+                            <div class="legend-item"><span class="dot uni-dot"></span> Partner Universities</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- FOOTER -->
     <footer>
