@@ -250,5 +250,14 @@
     "campus": "Campus B",
     "image": "networks-book.jpg",
     "description": "Comprehensive guide to computer networks and protocols."
+  },
+  {
+    "id": 29,
+    "title": "2000 Essential Korean Words for Begginers",
+    "price": 81250,
+    "condition": "Like New",
+    "campus": "Campus A",
+    "image": "korean-words.jpeg",
+    "description": "Comprehensive guide to computer networks and protocols."
   }
 ]
