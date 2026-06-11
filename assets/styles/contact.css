@@ -82,7 +82,6 @@
     box-sizing: border-box;
     border: 1px solid #cbd5e1;
     border-radius: 8px;
-    font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     color: var(--text);
     background-color: #ffffff;
@@ -99,7 +98,6 @@
 
 /* SUBMIT BUTTON */
 .form-submit-btn {
-    font-family: 'Montserrat', sans-serif;
     background-color: var(--primary);
     color: var(--secondary);
     border: none;

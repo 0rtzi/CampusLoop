@@ -88,11 +88,10 @@ body {
     box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
 }
 
-/* RECTÁNGULO DE FOTO */
-/* Asegura que el rectángulo sea un contenedor interactivo real */
+/* Photo */
 .image-upload-zone {
     width: 100%;
-    height: 240px; /* Alto fijo donde cuadrarán contenedor e imagen */
+    height: 240px;
     border: 2px dashed #cbd5e1;
     border-radius: 14px;
     background-color: #f8fafc;
@@ -103,12 +102,12 @@ body {
     overflow: hidden;
     transition: all 0.2s ease;
     box-sizing: border-box;
-    margin: 0 auto; /* Opcional: centra el rectángulo si se vuelve estrecho */
+    margin: 0 auto;
 }
 
 .image-upload-zone.has-image {
-    width: fit-content; /* El rectángulo se adapta exactamente al ancho de la foto */
-    border-style: solid; /* Opcional: cambia a línea continua para que luzca más pulido */
+    width: fit-content;
+    border-style: solid; 
     padding: 0;
 }
 
@@ -117,10 +116,9 @@ body {
     background-color: #f0f7ff;
 }
 
-/* Fuerza a la foto a tapar el texto gris y ponerse al frente */
 .image-preview {
-    height: 100%;       /* Fuerza a la foto a medir exactamente los 240px del contenedor */
-    width: auto;        /* El ancho se calcula solo de forma proporcional (mantiene el aspect-ratio) */
+    height: 100%; 
+    width: auto;
     display: block;
     object-fit: contain; 
 }

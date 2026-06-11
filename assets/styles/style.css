@@ -44,6 +44,11 @@ main {
     min-height: 80vh;
 }
 
+input, select,  textarea, button{
+    font-family: 'Montserrat', sans-serif;
+
+}
+
 a {
     text-decoration: none;
 }

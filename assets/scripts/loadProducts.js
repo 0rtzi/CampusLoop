@@ -14,14 +14,11 @@ async function loadProducts() {
         if (typeof initializeCart === 'function') initializeCart(); 
         if (typeof updateCartBadge === 'function') updateCartBadge(); 
         
-        // 1. Descargamos los productos estáticos del JSON original
         const response = await fetch('./assets/products/products.json');
         const jsonProducts = await response.json();
         
-        // 2. Recuperamos los productos creados dinámicamente desde sell.html
         const customProducts = JSON.parse(localStorage.getItem('customProducts')) || [];
         
-        // 3. Fusionamos ambos arrays en uno solo
         const products = [...jsonProducts, ...customProducts];
         
         console.log('Products loaded from JSON:', jsonProducts.length);
@@ -155,7 +152,6 @@ function createItemCard(product) {
 
     const buyButton = itemDiv.querySelector('.btn-buy');
     
-    // --- AQUÍ ESTÁ LA CORRECCIÓN CRÍTICA ---
     const productId = product.id.toString();
     const isAlreadyInCart = (typeof cartItems !== 'undefined') ? cartItems.has(productId) : false;
     

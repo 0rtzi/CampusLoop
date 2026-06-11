@@ -112,7 +112,6 @@ function updateSummaryPrices(subtotal) {
     document.getElementById('summaryTotal').textContent = formatPrice(total);
 }
 
-// 8. LÓGICA DEL ACORDEÓN MUTUAMENTE EXCLUSIVO
 function initAccordionLogic() {
     const headers = document.querySelectorAll('.accordion-header');
 
