@@ -57,22 +57,44 @@
   letter-spacing: -0.02em;
 }
 
-.hero a {
-  text-decoration: none;
+.btns-hero {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+}
+
+.btn-sell {
+  color: var(--secondary);
+  background-color: var(--accent);
+  box-shadow: 0 4px 14px rgba(247, 60, 138, 0.4);
+}
+
+.btn-sell:hover {
+  background-color: var(--accent-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(246, 59, 162, 0.5);
+}
+
+.btn-browse {
   color: var(--secondary);
   background-color: var(--primary);
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.4);
+}
+
+.btn-browse:hover {
+  background-color: var(--primary-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
+}
+
+.btns-hero a {
+  text-decoration: none;
   font-size: 18px;
   font-weight: 600;
   padding: 16px 40px;
   border-radius: 25px;
-  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.4);
   transition: all 0.2s ease;
-}
-
-.hero a:hover {
-  background-color: #2563eb;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
 }
 
 /* GENERAL */
