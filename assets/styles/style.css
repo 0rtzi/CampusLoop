@@ -41,6 +41,7 @@ main {
     flex-shrink: 0;
     width: 100%;
     box-sizing: border-box;
+    min-height: 80vh;
 }
 
 a {
