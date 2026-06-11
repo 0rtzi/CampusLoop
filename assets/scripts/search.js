@@ -3,21 +3,6 @@ let allProducts = [];
 let productsToDisplay = [];
 let currentPage = 1;
 const PRODUCTS_PER_PAGE = 12;
-let cartCount = 0; // Cart item counter
-let cartItems = new Set(); // Set of product IDs in cart
-
-// Initialize cart from localStorage
-function initializeCart() {
-    const savedCartCount = localStorage.getItem('cartCount');
-    const savedCartItems = localStorage.getItem('cartItems');
-    
-    if (savedCartCount) {
-        cartCount = parseInt(savedCartCount);
-    }
-    if (savedCartItems) {
-        cartItems = new Set(JSON.parse(savedCartItems));
-    }
-}
 
 // Setup search input listener
 function setupSearchListener() {

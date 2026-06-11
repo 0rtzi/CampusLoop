@@ -1,6 +1,6 @@
 // Format price with comma separator
 function formatPrice(price) {
-    return price.toLocaleString('en-US');
+    return price.toLocaleString('ko-KR', { style: 'currency', currency: 'KRW' });
 }
 
 // Fetch and load products from JSON
@@ -131,7 +131,6 @@ function createItemCard(product) {
         <img src="./assets/products/images/${product.image}" alt="${product.title}" class="p-img">
         <h2 class="title">${product.title}</h2>
         <div class="price">
-            <span>₩</span>
             <h1>${formatPrice(product.price)}</h1>
         </div>
         <div class="location">
@@ -186,28 +185,7 @@ function createItemCard(product) {
     return itemDiv;
 }
 
-// Update cart badge in navbar
-function updateCartBadge() {
-    const badge = document.getElementById('cartBadge');
-    if (badge) {
-        badge.textContent = cartCount;
-        if (cartCount > 0) {
-            badge.style.display = 'flex';
-        } else {
-            badge.style.display = 'none';
-        }
-    }
-}
-
-// Save cart to localStorage
-function saveCartToLocalStorage() {
-    localStorage.setItem('cartCount', cartCount.toString());
-    localStorage.setItem('cartItems', JSON.stringify(Array.from(cartItems)));
-}
-
 // Load products when the page loads
 document.addEventListener('DOMContentLoaded', function() {
-    initializeCart(); // Initialize cart from localStorage
-    updateCartBadge(); // Update badge immediately
     loadProducts(); // Then load products
 });
