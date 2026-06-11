@@ -1,0 +1,195 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f8fafc;
+}
+
+.sell-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.sell-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.02);
+}
+
+.sell-header {
+    margin-bottom: 32px;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 20px;
+}
+
+.sell-header h2 {
+    font-size: 24px;
+    color: #0f172a;
+    margin: 0 0 8px 0;
+}
+
+.sell-header p {
+    font-size: 15px;
+    color: #64748b;
+    margin: 0;
+}
+
+.sell-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group select,
+.form-group textarea {
+    padding: 12px 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    font-size: 15px;
+    color: #0f172a;
+    background-color: #f8fafc;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #3b82f6;
+    background-color: #ffffff;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+/* RECTÁNGULO DE FOTO */
+/* Asegura que el rectángulo sea un contenedor interactivo real */
+.image-upload-zone {
+    width: 100%;
+    height: 240px; /* Alto fijo donde cuadrarán contenedor e imagen */
+    border: 2px dashed #cbd5e1;
+    border-radius: 14px;
+    background-color: #f8fafc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+    margin: 0 auto; /* Opcional: centra el rectángulo si se vuelve estrecho */
+}
+
+.image-upload-zone.has-image {
+    width: fit-content; /* El rectángulo se adapta exactamente al ancho de la foto */
+    border-style: solid; /* Opcional: cambia a línea continua para que luzca más pulido */
+    padding: 0;
+}
+
+.image-upload-zone:hover {
+    border-color: #3b82f6;
+    background-color: #f0f7ff;
+}
+
+/* Fuerza a la foto a tapar el texto gris y ponerse al frente */
+.image-preview {
+    height: 100%;       /* Fuerza a la foto a medir exactamente los 240px del contenedor */
+    width: auto;        /* El ancho se calcula solo de forma proporcional (mantiene el aspect-ratio) */
+    display: block;
+    object-fit: contain; 
+}
+
+.upload-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #64748b;
+}
+
+.upload-icon {
+    font-size: 40px;
+    color: #94a3b8;
+    margin-bottom: 12px;
+}
+
+.image-upload-zone:hover .upload-icon {
+    color: #3b82f6;
+}
+
+/* CASILLA / CHECKBOX */
+.form-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background-color: #f8fafc;
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.form-checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    cursor: pointer;
+    accent-color: #3b82f6;
+}
+
+.form-checkbox label {
+    font-size: 14px;
+    color: #475569;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+/* BOTÓN DE PUBLICACIÓN INTERACTIVO */
+.btn-publish {
+    width: 100%;
+    background-color: #3b82f6;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.3);
+}
+
+.btn-publish:hover { background-color: #2563eb; }
+.btn-publish:active { transform: scale(0.99); }
+
+.btn-publish:disabled {
+    background-color: #cbd5e1;
+    color: #94a3b8;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none !important;
+}

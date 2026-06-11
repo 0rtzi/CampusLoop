@@ -75,7 +75,7 @@ function renderCartPage() {
             <img src="./assets/products/images/${product.image}" alt="${product.title}" class="cart-item-img">
             <h3 class="cart-item-title">${product.title}</h3>
             <p class="cart-item-price">${formatPrice(product.price)}</p>
-            <button class="btn-remove-item" data-id="${product.id}">X</button>
+            <button class="btn-remove-item" data-id="${product.id}">×</button>
         `;
 
         row.querySelector('.btn-remove-item').addEventListener('click', (e) => {

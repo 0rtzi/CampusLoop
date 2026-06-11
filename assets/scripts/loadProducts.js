@@ -1,21 +1,40 @@
+// Variables globales de control (Asegúrate de que no estén repetidas en otro script)
+if (typeof currentPage === 'undefined') window.currentPage = 1;
+if (typeof productsToDisplay === 'undefined') window.productsToDisplay = [];
+if (typeof PRODUCTS_PER_PAGE === 'undefined') window.PRODUCTS_PER_PAGE = 12; // Ajusta el número a tu gusto
+
 // Format price with comma separator
 function formatPrice(price) {
     return price.toLocaleString('ko-KR', { style: 'currency', currency: 'KRW' });
 }
 
-// Fetch and load products from JSON
+// Fetch and load products from JSON + LocalStorage
 async function loadProducts() {
     try {
-        initializeCart(); // Load cart from localStorage
-        updateCartBadge(); // Update badge with saved count
+        if (typeof initializeCart === 'function') initializeCart(); 
+        if (typeof updateCartBadge === 'function') updateCartBadge(); 
         
+        // 1. Descargamos los productos estáticos del JSON original
         const response = await fetch('./assets/products/products.json');
-        const products = await response.json();
-        console.log('Products loaded:', products.length);
-        setAllProducts(products);
+        const jsonProducts = await response.json();
+        
+        // 2. Recuperamos los productos creados dinámicamente desde sell.html
+        const customProducts = JSON.parse(localStorage.getItem('customProducts')) || [];
+        
+        // 3. Fusionamos ambos arrays en uno solo
+        const products = [...jsonProducts, ...customProducts];
+        
+        console.log('Products loaded from JSON:', jsonProducts.length);
+        console.log('Products loaded from LocalStorage:', customProducts.length);
+        console.log('Total combined products:', products.length);
+        
+        if (typeof setAllProducts === 'function') {
+            setAllProducts(products);
+        }
+        
         productsToDisplay = products;
         currentPage = 1;
-        console.log('Total products to display:', productsToDisplay.length);
+        
         renderPage();
     } catch (error) {
         console.error('Error loading products:', error);
@@ -35,22 +54,12 @@ function renderPage() {
 // Render pagination buttons
 function renderPagination() {
     const paginationContainer = document.getElementById('pagination');
-    
-    if (!paginationContainer) {
-        console.error('Pagination container not found');
-        return;
-    }
+    if (!paginationContainer) return;
 
     paginationContainer.innerHTML = '';
-
     const totalPages = Math.ceil(productsToDisplay.length / PRODUCTS_PER_PAGE);
-    console.log('Total pages:', totalPages, 'Products:', productsToDisplay.length, 'Per page:', PRODUCTS_PER_PAGE);
 
-    // If only one page, don't show pagination
-    if (totalPages <= 1) {
-        console.log('Only one page, not showing pagination');
-        return;
-    }
+    if (totalPages <= 1) return;
 
     // Previous button
     const prevButton = document.createElement('button');
@@ -97,38 +106,39 @@ function renderPagination() {
 // Render products as item cards
 function renderProducts(products) {
     const itemContainer = document.querySelector('.items-grid');
-    
     if (!itemContainer) {
-        console.error('Item container not found');
+        console.error('Item container (.items-grid) not found');
         return;
     }
 
-    // Clear existing items
     itemContainer.innerHTML = '';
 
-    // Show message if no products found
     if (products.length === 0) {
         itemContainer.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: #666; padding: 40px;">No products found</p>';
         return;
     }
 
-    // Create and append each product card
     products.forEach(product => {
         const itemElement = createItemCard(product);
         itemContainer.appendChild(itemElement);
     });
 }
 
-// Create a single item card element
+// Create a single item card element (¡CORREGIDO! 🚀)
 function createItemCard(product) {
     const itemDiv = document.createElement('div');
     itemDiv.className = 'item';
+
+    // Control de imagen: Base64 dinámica o ruta local por defecto
+    const imageSource = (product.image && product.image.startsWith('data:image')) 
+        ? product.image 
+        : `./assets/products/images/${product.image}`;
 
     itemDiv.innerHTML = `
         <div class="state">
             <p>${product.condition}</p>
         </div>
-        <img src="./assets/products/images/${product.image}" alt="${product.title}" class="p-img">
+        <img src="${imageSource}" alt="${product.title}" class="p-img">
         <h2 class="title">${product.title}</h2>
         <div class="price">
             <h1>${formatPrice(product.price)}</h1>
@@ -143,11 +153,11 @@ function createItemCard(product) {
         </button>
     `;
 
-    // Add event listener to the buy button
     const buyButton = itemDiv.querySelector('.btn-buy');
     
-    // Check if product is already in cart
-    const isAlreadyInCart = cartItems.has(product.id.toString());
+    // --- AQUÍ ESTÁ LA CORRECCIÓN CRÍTICA ---
+    const productId = product.id.toString();
+    const isAlreadyInCart = (typeof cartItems !== 'undefined') ? cartItems.has(productId) : false;
     
     if (isAlreadyInCart) {
         buyButton.classList.add('in-cart');
@@ -158,9 +168,9 @@ function createItemCard(product) {
     }
 
     buyButton.addEventListener('click', () => {
-        const productId = product.id.toString();
-        const isInCart = cartItems.has(productId);
+        if (typeof cartItems === 'undefined') return;
         
+        const isInCart = cartItems.has(productId);
         const icon = buyButton.querySelector('span');
         const text = buyButton.querySelector('p');
         
@@ -169,17 +179,17 @@ function createItemCard(product) {
             icon.textContent = 'remove_shopping_cart';
             text.textContent = 'Remove from cart';
             cartItems.add(productId);
-            cartCount++;
+            if (typeof cartCount !== 'undefined') cartCount++;
         } else {
             buyButton.classList.remove('in-cart');
             icon.textContent = 'add_shopping_cart';
             text.textContent = 'Add to cart';
             cartItems.delete(productId);
-            cartCount--;
+            if (typeof cartCount !== 'undefined') cartCount--;
         }
         
-        updateCartBadge();
-        saveCartToLocalStorage();
+        if (typeof updateCartBadge === 'function') updateCartBadge();
+        if (typeof saveCartToLocalStorage === 'function') saveCartToLocalStorage();
     });
 
     return itemDiv;
@@ -187,5 +197,5 @@ function createItemCard(product) {
 
 // Load products when the page loads
 document.addEventListener('DOMContentLoaded', function() {
-    loadProducts(); // Then load products
+    loadProducts(); 
 });

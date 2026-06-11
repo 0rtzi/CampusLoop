@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./assets/logo/CampusLoop_Black.svg">
+    <title>Home - CampusLoop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <link rel="stylesheet" href="./assets/styles/sell.css">
+</head>
+<body>
+    <!-- MENU -->
+    <header class="navbar">
+        <div class="navbar-left">
+            <a href="index.html" class="logo-container">
+                <img class="logo-img" src="./assets/logo/CampusLoop_Blue.svg" alt="Logo CampusLoop">
+                <p class="logo-name">CampusLoop</p>
+            </a>
+        </div>
+        <nav class="navbar-center">
+            <a class="nav-link" href="index.html">HOME</a>
+            <a class="nav-link" href="browse.html">STORE</a>
+            <a class="nav-link" href="contact.html">CONTACT</a>
+        </nav>
+        <div class="navbar-right">
+            <a href="cart.html" class="nav-icon">
+                <span class="material-symbols-rounded">shopping_basket</span>
+                <span class="cart-badge" id="cartBadge">0</span>
+            </a>
+            <a href="#" class="btn-login">Log In</a>
+            <a href="#" class="btn-signup">Sign Up</a>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="sell-container">
+        <div class="sell-card">
+            <div class="sell-header">
+                <h2>List a New Product</h2>
+                <p>Fill out the details below to list your item across university campuses.</p>
+            </div>
+
+            <form id="sellForm" class="sell-form" onsubmit="event.preventDefault();">
+                <div class="form-group">
+                    <label>Product Photo</label>
+                    
+                    <input type="file" id="productImageInput" accept="image/*" style="display: none;">
+                    
+                    <label for="productImageInput" class="image-upload-zone" id="imageUploadZone">
+                        <div class="upload-placeholder" id="uploadPlaceholder">
+                            <span class="material-symbols-rounded upload-icon">add_a_photo</span>
+                            <p>Click to upload product image</p>
+                            <span class="upload-hint">Supports PNG, JPG</span>
+                        </div>
+                        
+                        <img src="" alt="Preview" id="imagePreview" class="image-preview" style="display: none;">
+                    </label>
+                </div>      
+                <div class="form-group">
+                    <label for="productTitle">Product Title</label>
+                    <input type="text" id="productTitle" placeholder="e.g., iPad Air 5th Gen (64GB, Wi-Fi)" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="productPrice">Price (₩ KRW)</label>
+                        <input type="number" id="productPrice" placeholder="e.g., 450000" min="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="productCondition">Condition</label>
+                        <select id="productCondition" required>
+                            <option value="" disabled selected>Select condition...</option>
+                            <option value="New">New (Never opened)</option>
+                            <option value="Like New">Like New (Mint condition)</option>
+                            <option value="Good">Good (Slightly used)</option>
+                            <option value="Fair">Fair (Visible wear, functional)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="productCampus">University Campus</label>
+                    <input type="text" id="productCampus" placeholder="e.g., Yonsei University (Sinchon Campus)" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="productDescription">Brief Description</label>
+                    <textarea id="productDescription" rows="4" placeholder="Describe the item's features, defects, or details..." required></textarea>
+                </div>
+
+                <div class="form-checkbox">
+                    <input type="checkbox" id="termsAgreement" required>
+                    <label for="termsAgreement">
+                        I confirm that this item is authentic, legally obtained, and complies with CampusLoop's community guidelines and university trade policies.
+                    </label>
+                </div>
+
+                <button type="submit" id="btnPublish" class="btn-publish" disabled>Publish Product</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="column ownership">
+            <a href="index.html">
+                <img class="logo-img" src="./assets/logo/CampusLoop_Blue.svg" alt="CampusLoop logo">
+                <p class="logo-name">CampusLoop</p>
+            </a>
+            <p>Created by Xinyao Salgado</p>
+        </div>
+        <div class="column platform">
+            <h5>PLATFORM</h5>
+            <a href="index.html">HOME</a>
+            <a href="browse.html">BROWSE</a>
+            <a href="sell.html">SELL</a>
+            <a href="cart.html">CART</a>
+        </div>
+        <div class="column">
+            <h5>CONNECT</h5>
+            <a href="contact.html">CONTACT</a>
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">KakaoTalk</a>
+        </div>
+    </footer>
+    <script src="./assets/scripts/cart-items.js"></script>
+    <script src="./assets/scripts/sell.js"></script>
+</body>
+</html>
