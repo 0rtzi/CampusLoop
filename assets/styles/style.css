@@ -30,6 +30,17 @@ body {
         linear-gradient(to bottom, hsl(from var(--primary) h s l / 0.1) 1px, transparent 1px);
     background-size: 40px 40px;
     background-attachment: fixed;
+    min-height: 100vh;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-shrink: 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 a {
@@ -187,11 +198,14 @@ footer {
     background-color: var(--secondary-dark);
     border-top: 1px solid #e2e8f0;
     padding: 30px 40px 30px 40px;
-    
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     gap: 40px;
     box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    box-sizing: border-box;
+
+    flex-grow: 1;
 }
 
 .column {
