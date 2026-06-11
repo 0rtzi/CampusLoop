@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="./assets/styles/style.css">
+    <link rel="stylesheet" href="./assets/styles/index.css">
 </head>
 <body>
     <!-- MENU -->
@@ -36,17 +37,132 @@
 
     <!-- MAIN CONTENT -->
     <main>
-        <!-- Hero -->
-        <section>
-            <img src="campus.png" alt="Imagen de campus">
+        <!-- HERO -->
+        <section class="hero">
+            <img src="./assets/images/campus.jpg" alt="Imagen de campus">
             <div>
                 <h1>From one student to another</h1>
-                <a href="#">Start browsing</a>
+                <a href="browse.html">Start browsing</a>
             </div>
         </section>
-        <!-- Problem -->
-        <section>
+        
+        <!-- PROBLEM -->
+        <section id="problem" class="web-section problem-section">
+            <div class="container">
+            <span class="section-tagline">The Challenge</span>
+            <h2>Temporary students need a smarter and simpler circular marketplace</h2>
+            
+            <div class="problem-content">
+                <div class="problem-text">
+                <p>
+                    Every year, thousands of international students arrive in South Korea for exchange programs, 
+                    language courses, and university degrees. During their stay, they need to buy everyday items 
+                    such as furniture, kitchen supplies, electronics, bedding, and study materials.
+                </p>
+                <p>
+                    However, most of these students only stay in the country for a limited period of time, 
+                    usually between 4 and 12 months. When their exchange ends, they face a major problem: 
+                    <strong>they do not know what to do with all the items they accumulated</strong> during their stay.
+                </p>
+                </div>
 
+                <div class="problem-reasons">
+                <h3>Why existing platforms fail:</h3>
+                <ul>
+                    <li><strong>Language Barrier:</strong> Many second-hand apps are only available in Korean.</li>
+                    <li><strong>Communication Barriers:</strong> Language gaps make negotiations and transactions harder.</li>
+                    <li><strong>Lack of Trust:</strong> There is very little trust or safety verification between unknown users.</li>
+                    <li><strong>Not Adapted:</strong> Current marketplaces are simply not designed for temporary student life.</li>
+                </ul>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- SOLUTION -->
+        <section id="solution" class="web-section solution-section">
+            <div class="container">
+            <span class="section-tagline">Our Solution</span>
+            <h2>A smarter way to buy, sell, and move on</h2>
+            
+            <div class="solution-cards">
+                <div class="solution-card">
+                <div class="card-icon">🔒</div>
+                <h3>Campus-Based Marketplace</h3>
+                <p>
+                    CampusLoop creates an exclusive second-hand marketplace for international students, making transactions safer, faster, and more trusted through university verification networks.
+                </p>
+                </div>
+
+                <div class="solution-card">
+                <div class="card-icon">✈️</div>
+                <h3>Move-Out Selling System</h3>
+                <p>
+                    We help you quickly sell your belongings before heading back home with simplified listings, campus-focused visibility, and special move-out packages.
+                </p>
+                </div>
+
+                <div class="solution-card">
+                <div class="card-icon">♻️</div>
+                <h3>Circular Student Ecosystem</h3>
+                <p>
+                    Reduce environmental waste by allowing essential products to circulate continuously between incoming and outgoing student generations.
+                </p>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- STEPS -->
+        <section id="how-it-works" class="web-section steps-section">
+            <div class="container">
+            <span class="section-tagline">Step by Step</span>
+            <h2>How CampusLoop Works</h2>
+            
+            <ol class="steps-list">
+                <li>
+                <span class="step-number">01</span>
+                <div class="step-content">
+                    <h3>Verify Account</h3>
+                    <p>Sign up using your verified university email to ensure a safe and trusted community exclusive to real students.</p>
+                </div>
+                </li>
+                <li>
+                <span class="step-number">02</span>
+                <div class="step-content">
+                    <h3>Browse Nearby</h3>
+                    <p>Find everything you need (furniture, electronics, textbooks) just a few steps away from your campus or housing.</p>
+                </div>
+                </li>
+                <li>
+                <span class="step-number">03</span>
+                <div class="step-content">
+                    <h3>Easy Dealing</h3>
+                    <p>List items you no longer need in minutes, or connect directly with other students to buy what you lack.</p>
+                </div>
+                </li>
+                <li>
+                <span class="step-number">04</span>
+                <div class="step-content">
+                    <h3>Move-Out Mode</h3>
+                    <p>Leaving soon? Activate Move-Out Mode to group all your items together and sell them rapidly to incoming students.</p>
+                </div>
+                </li>
+            </ol>
+            </div>
+        </section>
+
+        <!-- VALUES -->
+        <section id="values" class="web-section values-section">
+            <div class="container">
+            <h2>Designed by Students, For Students</h2>
+            <div class="values-pills">
+                <div class="pill">💰 Affordable</div>
+                <div class="pill">♻️ Sustainable</div>
+                <div class="pill">🤝 Community-Driven</div>
+                <div class="pill">📈 Scalable</div>
+            </div>
+            </div>
         </section>
     </main>
 

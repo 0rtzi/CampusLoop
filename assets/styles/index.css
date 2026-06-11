@@ -1,0 +1,267 @@
+/* HERO */
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 450px;       
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  overflow: hidden;        
+
+  /* El truco está aquí: cambia "transparent" por tu color de fondo liso */
+  background-color: #ffffff; /* Puedes usar #ffffff (blanco) o el color base de tu diseño */
+}
+
+.hero img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* Hace que la imagen llene el espacio sin deformarse */
+  z-index: 1;              /* Se queda en la capa de atrás */
+  opacity: 0.25;           /* "Casi transparente" (ajusta entre 0 y 1 a tu gusto) */
+  
+  -webkit-mask-image: linear-gradient(to bottom, 
+    rgba(0, 0, 0, 0) 0%,     /* Totalmente invisible en el borde superior */
+    rgba(0, 0, 0, 1) 15%,    /* Se vuelve 100% visible al bajar un 15% */
+    rgba(0, 0, 0, 1) 85%,    /* Se mantiene 100% visible hasta el 80% */
+    rgba(0, 0, 0, 0) 100%    /* Se desvanece por completo al llegar al 100% (borde inferior) */
+  );
+  
+  mask-image: linear-gradient(to bottom, 
+    rgba(0, 0, 0, 0) 0%, 
+    rgba(0, 0, 0, 1) 15%, 
+    rgba(0, 0, 0, 1) 85%, 
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.hero > div {
+  position: relative;
+  z-index: 2;              /* Se posiciona por encima de la imagen */
+  text-align: center;      /* Centra las líneas de texto */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;               /* Separación entre el H1 y el botón */
+  max-width: 800px;        /* Evita que el texto se estire demasiado a lo ancho */
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 48px;         /* Tamaño grande de impacto */
+  font-weight: 800;
+  color: var(--text);
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.hero a {
+  text-decoration: none;
+  color: var(--secondary);
+  background-color: var(--primary);
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 25px;     /* Estilo píldora en sintonía con el resto de la app */
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.4);
+  transition: all 0.2s ease;
+}
+
+.hero a:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
+}
+
+/*  */
+.web-section {
+  padding: 90px 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Etiquetas pequeñas sobre los títulos */
+.section-tagline {
+  display: block;
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 800;
+  margin-top: 0;
+  margin-bottom: 48px;
+  letter-spacing: -0.02em;
+}
+
+/* PROBLEM SECTION */
+.problem-section {
+  background-color: var(--secondary);
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.problem-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.problem-text p {
+  font-size: 17px;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+}
+
+.problem-text strong {
+  color: var(--text);
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.problem-reasons h3 {
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.problem-reasons ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.problem-reasons li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 16px;
+  color: var(--text-secondary);
+  font-size: 16px;
+}
+
+.problem-reasons li::before {
+  content: "✕";
+  position: absolute;
+  left: 0;
+  color: #ef4444; 
+  font-weight: bold;
+}
+
+/* SOLUTION SECTION */
+.solution-section {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.solution-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.solution-card {
+  background-color: var(--background-primary);
+  padding: 40px 30px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.solution-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px -5px rgba(0, 0, 0, 0.06);
+}
+
+.card-icon {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.solution-card h3 {
+  font-size: 20px;
+  margin: 0 0 12px 0;
+}
+
+.solution-card p {
+  color: var(--text-secondary);
+  margin: 0;
+  font-size: 15px;
+}
+
+/* STEPS SECTION */
+.steps-section {
+  background-color: var(--background-primary);
+}
+
+.steps-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+}
+
+.steps-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.step-number {
+  font-size: 42px;
+  font-weight: 800;
+  color: hsla(217, 91%, 60%, 0.7); 
+  line-height: 1;
+}
+
+.step-content h3 {
+  font-size: 19px;
+  margin: 0 0 8px 0;
+}
+
+.step-content p {
+  color: var(--text-secondary);
+  font-size: 15px;
+  margin: 0;
+}
+
+/* VALUES SECTION */
+.values-section {
+  text-align: center;
+  background-color: var(--accent-light);
+  color: var(--text);
+}
+
+.values-section h2 {
+  margin-bottom: 35px;
+}
+
+.values-pills {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.pill {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}

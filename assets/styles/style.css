@@ -18,6 +18,8 @@
     --primery-dark: hsl(from var(--primary) h s calc(l - 20));
     --secondary-dark: hsl(from var(--secondary) h s calc(l - 5));
     --background: hsl(0, 0%, 98%);
+    --background-primary: white;
+    --background-secondary: hsl(349, 100%, 86%);
 }
 
 body {
@@ -29,6 +31,7 @@ body {
     background-size: 40px 40px;
     background-attachment: fixed;
 }
+
 a {
     text-decoration: none;
 }
@@ -47,6 +50,9 @@ a {
     background-color: var(--secondary);
     box-shadow: 0 5px 5px rgba(0,0,0,0.1);
     border-radius: 0 0 50px 50px;
+
+    position: relative;
+    z-index: 10;
 }
 
 .navbar-left {
