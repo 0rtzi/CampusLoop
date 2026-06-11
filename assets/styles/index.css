@@ -8,9 +8,7 @@
   justify-content: center; 
   align-items: center;     
   overflow: hidden;        
-
-  /* El truco está aquí: cambia "transparent" por tu color de fondo liso */
-  background-color: #ffffff; /* Puedes usar #ffffff (blanco) o el color base de tu diseño */
+  background-color: #ffffff;
 }
 
 .hero img {
@@ -19,15 +17,15 @@
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;       /* Hace que la imagen llene el espacio sin deformarse */
-  z-index: 1;              /* Se queda en la capa de atrás */
-  opacity: 0.25;           /* "Casi transparente" (ajusta entre 0 y 1 a tu gusto) */
+  object-fit: cover;      
+  z-index: 1;          
+  opacity: 0.25;      
   
   -webkit-mask-image: linear-gradient(to bottom, 
-    rgba(0, 0, 0, 0) 0%,     /* Totalmente invisible en el borde superior */
-    rgba(0, 0, 0, 1) 15%,    /* Se vuelve 100% visible al bajar un 15% */
-    rgba(0, 0, 0, 1) 85%,    /* Se mantiene 100% visible hasta el 80% */
-    rgba(0, 0, 0, 0) 100%    /* Se desvanece por completo al llegar al 100% (borde inferior) */
+    rgba(0, 0, 0, 0) 0%,  
+    rgba(0, 0, 0, 1) 15%,  
+    rgba(0, 0, 0, 1) 85%,  
+    rgba(0, 0, 0, 0) 100%   
   );
   
   mask-image: linear-gradient(to bottom, 
@@ -40,22 +38,22 @@
 
 .hero > div {
   position: relative;
-  z-index: 2;              /* Se posiciona por encima de la imagen */
-  text-align: center;      /* Centra las líneas de texto */
+  z-index: 2;     
+  text-align: center; 
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;               /* Separación entre el H1 y el botón */
-  max-width: 800px;        /* Evita que el texto se estire demasiado a lo ancho */
+  gap: 40px;  
+  max-width: 800px;     
   padding: 0 20px;
 }
 
 .hero h1 {
-  font-size: 48px;         /* Tamaño grande de impacto */
+  font-size: 48px;       
   font-weight: 800;
   color: var(--text);
   margin: 0;
-  line-height: 1.2;
+  line-height: 1.3;
   letter-spacing: -0.02em;
 }
 
@@ -63,10 +61,10 @@
   text-decoration: none;
   color: var(--secondary);
   background-color: var(--primary);
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
-  padding: 12px 28px;
-  border-radius: 25px;     /* Estilo píldora en sintonía con el resto de la app */
+  padding: 16px 40px;
+  border-radius: 25px;
   box-shadow: 0 4px 14px rgba(59, 130, 246, 0.4);
   transition: all 0.2s ease;
 }
@@ -77,7 +75,7 @@
   box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
 }
 
-/*  */
+/* GENERAL */
 .web-section {
   padding: 90px 20px;
   width: 100%;
@@ -89,7 +87,6 @@
   margin: 0 auto;
 }
 
-/* Etiquetas pequeñas sobre los títulos */
 .section-tagline {
   display: block;
   color: var(--primary);
@@ -153,11 +150,9 @@ h2 {
 }
 
 .problem-reasons li::before {
-  content: "✕";
+  content: "❌";
   position: absolute;
   left: 0;
-  color: #ef4444; 
-  font-weight: bold;
 }
 
 /* SOLUTION SECTION */
